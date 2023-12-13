@@ -19,7 +19,7 @@ import { StarIcon } from '@/assets/svg/star';
 
 export const TableComponent = () => {
   const [page, setPage] = React.useState(1);
-  const rowsPerPage = 10;
+  const rowsPerPage = 15;
 
   const pages = Math.ceil(users.length / rowsPerPage);
 

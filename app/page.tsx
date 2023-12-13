@@ -6,14 +6,14 @@ import { Input } from '@nextui-org/input';
 export default function Home() {
   return (
     <>
-      <section className='flex flex-col w-full h-[30%] align-middle items-center justify-center gap-6'>
+      <section className='flex flex-col w-full h-[20%] align-middle items-center justify-center gap-6'>
         <h1 className='text-6xl font-black '>Your clients,</h1>
         <h1 className='text-8xl font-black bg-gradient-to-r from-indigo-500 to-yellow-100 inline-block text-transparent bg-clip-text animate-text'>
           Boooooosted
         </h1>
       </section>
 
-      <section className='flex flex-col w-full h-[35%] align-middle items-center justify-center'>
+      <section className='flex flex-col w-full h-[30%] align-middle items-center justify-center'>
         <div className='w-6/12'>
           <Input
             label='Find clients'
