@@ -59,12 +59,16 @@ export const TableComponent = () => {
           <div className='flex justify-between items-center '>
             <div style={{ width: '100%' }}>{cellValue}</div>
             <div className='flex items-center ml-2'>
-              <StarIcon color='#0A81D1' />
+              <StarIcon color='#3BF4FB' />
             </div>
           </div>
         );
       case 'website':
-        return <Link href={String(cellValue)}>{cellValue}</Link>;
+        return (
+          <Link isExternal target='_blank' href={String(cellValue)}>
+            <p>{cellValue}</p>
+          </Link>
+        );
 
       default:
         return cellValue;
