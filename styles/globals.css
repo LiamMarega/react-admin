@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-poly {
+  background-image: url('../assets/svg/hexagon.svg');
+}
+.bg-dot {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.693) 0.5px, transparent 5px);
+  background-size: 60px 60px;
+  background-repeat: repeat;
+  /* add mask */
+  --mask-image: radial-gradient(ellipse at center, rgb(0, 0, 0) 0%, transparent 70%);
+  -webkit-mask-image: var(--mask-image);
+  mask-image: var(--mask-image);
+  backdrop-filter: blur(20%);
+}

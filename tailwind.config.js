@@ -9,9 +9,12 @@ module.exports = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      solidenTrial: ['var(--font-soliden-trial)'],
+    },
     extend: {
       animation: {
-        text: 'text 8s ease infinite',
+        text: 'text 5s ease infinite',
       },
       keyframes: {
         text: {
@@ -32,19 +35,24 @@ module.exports = {
     nextui({
       prefix: 'nextui', // prefix for themes variables
       addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
-      defaultTheme: 'light', // default theme from the themes object
-      defaultExtendTheme: 'light', // default theme to extend on custom themes
+      defaultTheme: 'dark', // default theme from the themes object
+      defaultExtendTheme: 'dark', // default theme to extend on custom themes
       layout: {}, // common layout tokens (applied to all themes)
       themes: {
         light: {
           layout: {}, // light theme layout tokens
-          colors: {}, // light theme colors
+          colors: {
+            primary: '#3BF4FB',
+            secondary: '#0A81D1',
+            tertiary: '#F5A524',
+          },
         },
         dark: {
           layout: {}, // dark theme layout tokens
           colors: {
             primary: '#3BF4FB',
             secondary: '#0A81D1',
+            tertiary: '#F5A524',
           }, // dark theme colors
         },
         customTheme: {

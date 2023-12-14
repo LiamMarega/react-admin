@@ -77,14 +77,13 @@ export const TableComponent = () => {
 
   return (
     <Table
-      aria-label='Example table with dynamic content'
+      aria-label='Table clientixPlus'
       selectionMode='multiple'
       bottomContent={
         <div className='flex w-full justify-center'>
           <Pagination
             isCompact
             showControls
-            showShadow
             color='secondary'
             page={page}
             total={pages}
@@ -92,9 +91,6 @@ export const TableComponent = () => {
           />
         </div>
       }
-      classNames={{
-        wrapper: 'min-h-[222px]',
-      }}
     >
       <TableHeader columns={columns}>
         {(column: any) => <TableColumn key={column.key}>{column.label}</TableColumn>}
