@@ -4,6 +4,7 @@ import { Providers } from './providers';
 import { Link } from '@nextui-org/link';
 import { solidenTrial } from '@/config/fonts';
 import clsx from 'clsx';
+import { Navbar } from '@/components/navbar';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -19,8 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             themes: ['light', 'dark', 'customTheme'],
           }}
         >
-          <div className='relative  flex flex-col h-screen'>
-            <main className='container  mx-auto max-w-7xl pt-16 px-6 flex-grow'>{children}</main>
+          <div className='relative flex flex-col h-screen'>
+            <Navbar />
+            <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>{children}</main>
             <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal
