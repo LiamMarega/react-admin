@@ -10,7 +10,7 @@ export default function Home() {
       {/* bg dots */}
       <div className='bg-dot w-full h-full absolute inset-0'></div>
       <section className='flex flex-col w-full py-64 h-[20%] font-solidenTrial align-middle items-center justify-center'>
-        <h1 className='z-10 text-6xl font-bold '>Your clients,</h1>
+        <h1 className='z-10 text-6xl font-bold '>Your clients list,</h1>
         <h1 className='z-10 text-8xl font-bold bg-gradient-to-r from-primary to-tertiary inline-block text-transparent bg-clip-text animate-text'>
           Boooooosted
         </h1>
@@ -52,13 +52,13 @@ export default function Home() {
 
       <section className='z-10 flex flex-col justify-center gap-4 pt-40'>
         <div className='flex gap-5 justify-end'>
-          <Button color='primary' variant='shadow'>
+          <Button color='primary' variant='shadow' className='text-black'>
             All Clients
           </Button>
-          <Button color='primary' variant='ghost'>
+          <Button color='primary' variant='ghost' className='hover:text-black'>
             Active
           </Button>
-          <Button color='primary' variant='ghost'>
+          <Button color='primary' variant='ghost' className='hover:text-black'>
             Inactive
           </Button>
         </div>
