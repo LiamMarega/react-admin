@@ -35,16 +35,16 @@ module.exports = {
     nextui({
       prefix: 'nextui', // prefix for themes variables
       addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
-      defaultTheme: 'dark', // default theme from the themes object
-      defaultExtendTheme: 'dark', // default theme to extend on custom themes
+      defaultTheme: 'light', // default theme from the themes object
+      defaultExtendTheme: 'light', // default theme to extend on custom themes
       layout: {}, // common layout tokens (applied to all themes)
       themes: {
         light: {
           layout: {}, // light theme layout tokens
           colors: {
             primary: '#F5A524',
-            secondary: '#0A81D1',
-            tertiary: '#F5A524',
+            secondary: '#3BF4FB',
+            tertiary: '#0A81D1',
           },
         },
         dark: {

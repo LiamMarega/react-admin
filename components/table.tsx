@@ -59,7 +59,7 @@ export const TableComponent = () => {
           <div className='flex justify-between items-center '>
             <div style={{ width: '100%' }}>{cellValue}</div>
             <div className='flex items-center ml-2'>
-              <StarIcon color='#3BF4FB' />
+              <StarIcon className='text-primary' />
             </div>
           </div>
         );

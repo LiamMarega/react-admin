@@ -17,8 +17,7 @@ import { link as linkStyles } from '@nextui-org/theme';
 import { siteConfig } from '@/config/site';
 import NextLink from 'next/link';
 import clsx from 'clsx';
-
-import logoImg from '@/public/logo.png';
+import logoSvg from '@/assets/svg/icons/8-100.svg';
 import { ThemeSwitch } from '@/components/theme-switch';
 import {
   TwitterIcon,
@@ -27,6 +26,8 @@ import {
   HeartFilledIcon,
   SearchIcon,
 } from '@/components/icons';
+import Image from 'next/image';
+import { LogoSVG } from '@/assets/svg/icons/logoSvg';
 
 export const Navbar = () => {
   const searchInput = (
@@ -55,7 +56,8 @@ export const Navbar = () => {
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
           <NextLink className='flex justify-start items-center gap-1' href='/'>
-            <img src={logoImg.src} alt='logo' width={'5%'} />
+            <LogoSVG className='h-8 dark:hidden' fill='black' />
+            <LogoSVG className='h-8 light:hidden' fill='white' />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
