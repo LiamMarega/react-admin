@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <div className='relative light:bg-white flex flex-col h-full'>
             <Navbar />
-            <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>{children}</main>
+            <main className='container  mx-auto max-w-7xl pt-16 px-6 flex-grow'>{children}</main>
             <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal

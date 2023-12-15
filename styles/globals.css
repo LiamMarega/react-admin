@@ -10,7 +10,11 @@
   background-size: 60px 60px;
   background-repeat: repeat;
   /* add mask */
-  --mask-image: radial-gradient(ellipse at center, rgb(0, 0, 0) 0%, transparent 70%);
+  --mask-image: radial-gradient(
+    farthest-side ellipse at center,
+    rgb(255, 255, 255) 0%,
+    transparent 50%
+  );
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);
   backdrop-filter: blur(20%);

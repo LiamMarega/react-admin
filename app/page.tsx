@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <>
       {/* bg dots */}
-      <div className='bg-dot-light dark:bg-dot w-screen h-screen absolute inset-0 '></div>
+      <div className='bg-dot-light dark:hidden w-screen h-screen absolute inset-0 '></div>
+      <div className='light:hidden bg-dot w-screen h-screen absolute inset-0 '></div>
       <section className='flex flex-col w-full  font-solidenTrial align-middle items-center justify-center'>
         <h1 className='z-10 text-6xl font-bold '>Your clients list,</h1>
         <h1 className='z-10 text-8xl font-bold bg-gradient-to-r from-primary to-tertiary inline-block text-transparent bg-clip-text animate-text'>
