@@ -19,13 +19,7 @@ import NextLink from 'next/link';
 import clsx from 'clsx';
 import logoSvg from '@/assets/svg/icons/8-100.svg';
 import { ThemeSwitch } from '@/components/theme-switch';
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-} from '@/components/icons';
+import { TwitterIcon, GithubIcon, DiscordIcon, HeartFilledIcon, SearchIcon } from '@/assets/icons';
 import Image from 'next/image';
 import { LogoSVG } from '@/assets/svg/icons/logoSvg';
 

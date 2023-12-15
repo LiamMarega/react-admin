@@ -16,10 +16,11 @@ import {
 } from '@nextui-org/react';
 import { users, columns } from '@/assets/data/tableData';
 import { StarIcon } from '@/assets/svg/star';
+import { SendIcon } from '@/assets/icons';
 
 export const TableComponent = () => {
   const [page, setPage] = React.useState(1);
-  const rowsPerPage = 15;
+  const rowsPerPage = 5;
 
   const pages = Math.ceil(users.length / rowsPerPage);
 
@@ -31,9 +32,9 @@ export const TableComponent = () => {
   }, [page, users]);
 
   const statusColorMap: Record<string, ChipProps['color']> = {
-    active: 'success',
-    paused: 'danger',
-    vacation: 'warning',
+    Contacted: 'success',
+    'Not contacted': 'danger',
+    Paused: 'warning',
   };
 
   type User = (typeof users)[0];
@@ -69,6 +70,18 @@ export const TableComponent = () => {
             <p>{cellValue}</p>
           </Link>
         );
+      case 'sendMessage':
+        return (
+          <Link
+            isExternal
+            target='_blank'
+            href={String(cellValue)}
+            className='flex justify-center content-center'
+          >
+            <SendIcon className='light:hidden h-5 stroke-black ' />
+            <SendIcon className='dark:hidden  h-5  stroke-white ' />
+          </Link>
+        );
 
       default:
         return cellValue;
@@ -84,7 +97,7 @@ export const TableComponent = () => {
           <Pagination
             isCompact
             showControls
-            color='secondary'
+            color='primary'
             page={page}
             total={pages}
             onChange={(page) => setPage(page)}
