@@ -33,8 +33,8 @@ const Column: FC<ColumnType> = ({ id, title, cards }) => {
         >
           {title}
         </p>
-        {cards.map((card) => (
-          <Card key={card?.id} id={card?.id} title={card?.title}></Card>
+        {cards?.map((card, idx) => (
+          <Card key={card?.id + idx} id={card?.id} title={card?.title}></Card>
         ))}
       </div>
     </SortableContext>

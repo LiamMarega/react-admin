@@ -106,7 +106,7 @@ export const TableComponent = () => {
       }
     >
       <TableHeader columns={columns}>
-        {(column: any) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+        {(column: any) => <TableColumn key={column?.key}>{column.label}</TableColumn>}
       </TableHeader>
       <TableBody items={items}>
         {(item: any) => (

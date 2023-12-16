@@ -143,12 +143,12 @@ export default function Board() {
       onDragOver={handleDragOver}
     >
       <div className='App' style={{ display: 'flex', flexDirection: 'row', padding: '20px' }}>
-        {columns.map((column) => (
+        {columns.map((column, idx) => (
           <Column
-            key={column?.id}
+            key={column?.id + idx}
             id={column?.id}
-            title={column?.title}
-            cards={column.cards}
+            title={column?.title ?? ''}
+            cards={column?.cards ?? []}
           ></Column>
         ))}
       </div>
