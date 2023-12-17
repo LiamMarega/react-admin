@@ -22,11 +22,11 @@ import ColumnContainer from './columnContainer';
 const defaultCols: Column[] = [
   {
     id: 'todo',
-    title: 'Todo',
+    title: 'Not contacted',
   },
   {
     id: 'doing',
-    title: 'Work in progress',
+    title: 'In contact',
   },
   {
     id: 'done',
@@ -298,7 +298,6 @@ const FlowBoard = () => {
             <div className='w-6 h-6'>
               <PlusIcon />
             </div>
-            Add Column
           </button>
         </div>
         <DragOverlay>
