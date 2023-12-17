@@ -42,7 +42,7 @@ module.exports = {
         light: {
           layout: {}, // light theme layout tokens
           colors: {
-            primary: '#F5A524',
+            primary: '#fcd34d',
             secondary: '#3BF4FB',
             tertiary: '#0A81D1',
           },

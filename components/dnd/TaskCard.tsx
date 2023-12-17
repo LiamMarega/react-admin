@@ -54,9 +54,7 @@ const TaskCard = ({ task, deleteTask, updateTask }: Props) => {
         {...attributes}
         {...listeners}
         className=' p-2.5 h-[100px]
-      min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-fuchsia-600
-      cursor-grab relative
-      '
+      min-h-[100px] items-center flex text-left rounded-xl hover:ring-1 hover:ring-inset cursor-grab relative'
       >
         <textarea
           className='h-[90%]
@@ -82,10 +80,7 @@ const TaskCard = ({ task, deleteTask, updateTask }: Props) => {
       {...attributes}
       {...listeners}
       onClick={toggleEditMode}
-      className='bg- p-2.5 h-[100px]
-    min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-fuchsia-600
-    cursor-grab relative task
-    '
+      className='dark:bg-slate-700 bg-gray-200  p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset cursor-grab relative task'
       onMouseEnter={() => {
         setMouseIsOver(true);
       }}
@@ -101,7 +96,7 @@ const TaskCard = ({ task, deleteTask, updateTask }: Props) => {
           onClick={() => {
             deleteTask(task.id);
           }}
-          className='stroke-white absolute right-4 top-1/2 -translate-y-1/2 bg-black p-2 rounded opacity-60 hover:opacity-100'
+          className='stroke-white absolute right-4 top-1/2 -translate-y-1/2 bg-black p-2 rounded opacity-60 hover:opacity-200'
         >
           <DeleteButton />
         </button>

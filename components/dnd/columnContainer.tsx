@@ -59,17 +59,20 @@ const ColumnContainer = (props: Props) => {
         {...listeners}
         onClick={() => setEditMode(true)}
         className='
-        bg-neutral-900
+        bg-primary
+		text-black
         text-md
         h-[60px]
         cursor-grab
-        rounded-md
+        rounded-xl
         p-3
         font-bold
-        rounded-b-none
+		rounded-b-none
+		rounded-3xl
+		dark:shadow-secondary
         border-x-neutral-900
         border-y-neutral-900
-        border-4
+        border-1
         m-1
         flex
         items-center

@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react';
 import { Column, Id } from '@/utils/types';
-import ColumnContainer from './ColumnContainer';
 import {
   DndContext,
   DragEndEvent,
@@ -18,6 +17,7 @@ import { createPortal } from 'react-dom';
 import { Task } from '@/utils/types';
 import TaskCard from './TaskCard';
 import { PlusIcon } from '@/assets/icons';
+import ColumnContainer from './columnContainer';
 
 const defaultCols: Column[] = [
   {
@@ -301,25 +301,23 @@ const FlowBoard = () => {
             Add Column
           </button>
         </div>
-        {createPortal(
-          <DragOverlay>
-            {activeColumn && (
-              <ColumnContainer
-                column={activeColumn}
-                deleteColumn={deleteColumn}
-                updateColumn={updateColumn}
-                createTask={createTask}
-                deleteTask={deleteTask}
-                updateTask={updateTask}
-                tasks={tasks.filter((task) => task.columnId === activeColumn.id)}
-              />
-            )}
-            {activeTask && (
-              <TaskCard task={activeTask} deleteTask={deleteTask} updateTask={updateTask} />
-            )}
-          </DragOverlay>,
-          document.body
-        )}
+        <DragOverlay>
+          {activeColumn && (
+            <ColumnContainer
+              column={activeColumn}
+              deleteColumn={deleteColumn}
+              updateColumn={updateColumn}
+              createTask={createTask}
+              deleteTask={deleteTask}
+              updateTask={updateTask}
+              tasks={tasks.filter((task) => task.columnId === activeColumn.id)}
+            />
+          )}
+          {activeTask && (
+            <TaskCard task={activeTask} deleteTask={deleteTask} updateTask={updateTask} />
+          )}
+        </DragOverlay>
+        ,
       </DndContext>
     </div>
   );

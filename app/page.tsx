@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='z-10 flex flex-col justify-center gap-4 pt-40'>
+      <section className='z-10 flex flex-col justify-center gap-20 pt-40'>
         <div className='flex gap-5 justify-end'>
           <Button color='primary' variant='shadow' className='text-black'>
             All Clients
@@ -31,6 +31,9 @@ export default function Home() {
           <Button color='primary' variant='ghost' className='hover:text-black'>
             Inactive
           </Button>
+        </div>
+        <div className='z-10 shadow-[0px_10px_50px_1px] rounded-3xl shadow-secondary '>
+          <TableComponent />
         </div>
         <div className='z-10 shadow-[0px_10px_50px_1px] rounded-3xl shadow-secondary '>
           <FlowBoard />
