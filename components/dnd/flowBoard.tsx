@@ -18,6 +18,7 @@ import { Task } from '@/utils/types';
 import TaskCard from './TaskCard';
 import { PlusIcon } from '@/assets/icons';
 import ColumnContainer from './columnContainer';
+import { users, columns } from '@/assets/data/tableData';
 
 const defaultCols: Column[] = [
   {
