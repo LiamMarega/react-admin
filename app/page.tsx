@@ -1,3 +1,4 @@
+import Board from '@/components/dnd/board';
 import { SearchBar } from '@/components/searcher';
 import { TableComponent } from '@/components/table';
 import { Button } from '@nextui-org/button';
@@ -32,7 +33,7 @@ export default function Home() {
           </Button>
         </div>
         <div className='z-10 shadow-[0px_10px_50px_1px] rounded-3xl shadow-secondary '>
-          <TableComponent />
+          <Board />
         </div>
       </section>
     </>
