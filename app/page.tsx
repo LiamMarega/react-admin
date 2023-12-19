@@ -7,16 +7,17 @@ export default function Home() {
   return (
     <>
       {/* bg dots */}
-      <div className='bg-dot-light dark:hidden w-screen h-screen absolute inset-0 '></div>
-      <div className='light:hidden bg-dot w-screen h-screen absolute inset-0 '></div>
+      <div className='bg-dot-light dark:hidden w-full h-screen absolute inset-0 '></div>
+      <div className='light:hidden bg-dot w-full h-screen absolute inset-0 '></div>
       <section className='flex flex-col w-full  font-solidenTrial align-middle items-center justify-center'>
         <h1 className='z-10 text-6xl font-bold '>Your clients list,</h1>
         <h1 className='z-10 text-8xl font-bold bg-gradient-to-r from-primary to-tertiary inline-block text-transparent bg-clip-text animate-text'>
           Boooooosted
         </h1>
         <div className='w-6/12 pt-28'>
-          <div className='z-10 duration-1000 hover:shadow-[0px_10px_70px_1px] rounded-full hover:shadow-blue-500/60 '></div>
-          <SearchBar />
+          <div className='z-10 duration-1000 hover:shadow-[0px_10px_70px_1px] rounded-full hover:shadow-secondary '>
+            <SearchBar />
+          </div>
         </div>
       </section>
 

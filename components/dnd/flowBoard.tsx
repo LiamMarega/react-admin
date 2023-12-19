@@ -254,18 +254,7 @@ const FlowBoard = () => {
   );
 
   return (
-    <div
-      className='
-    m-auto
-    flex
-    min-h-screen
-    w-full
-    items-center
-    overflow-x-auto
-    overflow-y-hidden
-    px-[40px]
-    '
-    >
+    <div className=' w-full flex items-center justify-center p-10'>
       <DndContext
         sensors={sensors}
         onDragStart={onDragStart}
@@ -274,7 +263,7 @@ const FlowBoard = () => {
       >
         <div className='flex gap-4 m-auto'>
           {/* render colums here */}
-          <div className='flex gap-2'>
+          <div className='flex gap-10'>
             <SortableContext items={columnsId}>
               {columns.map((col) => (
                 <div>
@@ -292,14 +281,14 @@ const FlowBoard = () => {
               ))}
             </SortableContext>
           </div>
-          <button
+          {/*  <button
             onClick={() => createNewColumn()}
-            className='h-[60px] w-[350px] min-w-[350px] cursor-pointer rounded-lg bg-buttonBackgroundColor p-4 ring-fuchsia-600 hover:ring-2 flex gap-2'
+            className='h-[60px] w-[350px] min-w-[350px] cursor-pointer rounded-md bg-buttonBackgroundColor p-4 ring-fuchsia-600 hover:ring-2 flex gap-2'
           >
             <div className='w-6 h-6'>
               <PlusIcon />
             </div>
-          </button>
+          </button> */}
         </div>
         <DragOverlay>
           {activeColumn && (
@@ -317,7 +306,6 @@ const FlowBoard = () => {
             <TaskCard task={activeTask} deleteTask={deleteTask} updateTask={updateTask} />
           )}
         </DragOverlay>
-        ,
       </DndContext>
     </div>
   );

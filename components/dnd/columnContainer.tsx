@@ -42,7 +42,7 @@ const ColumnContainer = (props: Props) => {
       <div
         ref={setNodeRef}
         style={style}
-        className='  w-[350px] h-[500px] max-h-[500px] rounded-md flex flex-col opacity-40 border-2 border-rose-500'
+        className='bg-white  w-[350px] h-full rounded-md flex flex-col opacity-40 border-2 border-rose-500'
       ></div>
     );
   }
@@ -51,7 +51,7 @@ const ColumnContainer = (props: Props) => {
     <div
       ref={setNodeRef}
       style={style}
-      className='w-[350px] h-[500px] max-h-[500px] rounded-md flex flex-col'
+      className='bg-white text-black border-1 w-[350px] max-h-screen rounded-md flex flex-col'
     >
       {/* column title */}
       <div
@@ -59,20 +59,17 @@ const ColumnContainer = (props: Props) => {
         {...listeners}
         onClick={() => setEditMode(true)}
         className='
-        bg-primary
-		text-black
+		text-primary
         text-md
         h-[60px]
         cursor-grab
-        rounded-xl
-        p-3
+        rounded-md
+        rounded-b-none
+		p-3
         font-bold
-		rounded-b-none
-		rounded-3xl
 		dark:shadow-secondary
         border-x-neutral-900
         border-y-neutral-900
-        border-1
         m-1
         flex
         items-center
@@ -124,7 +121,7 @@ const ColumnContainer = (props: Props) => {
       </div>
 
       {/* column task container */}
-      <div className='flex flex-grow flex-col gap-4 p-2 overflow-x-hidden overflow-y-auto'>
+      <div className='bg-gray-100 flex flex-grow flex-col gap-4 p-2 overflow-x-hidden overflow-y-auto'>
         <SortableContext items={tasksIds}>
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} deleteTask={deleteTask} updateTask={updateTask} />
