@@ -1,13 +1,24 @@
+'use client';
+import { FormEvent, useState } from 'react';
 import { SearchIcon } from '@/assets/icons';
 import { Input } from '@nextui-org/input';
 import DropMenu from './dropdown';
 
 export const SearchBar = () => {
+  const [value, setValue] = useState('');
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(value);
+  };
+
   return (
-    <>
+    <form onSubmit={(e) => onSubmit(e)}>
       <Input
         label='Find clients'
         radius='full'
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         classNames={{
           label: 'text-black/50 dark:text-white/90',
           input: [
@@ -35,6 +46,6 @@ export const SearchBar = () => {
         }
         endContent={<DropMenu />}
       />
-    </>
+    </form>
   );
 };
